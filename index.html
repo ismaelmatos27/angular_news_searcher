@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Create the icon of each tab on the webpage -->
+    <!-- <link rel="shorcut icon" href="img/favicon.ico" type="image/x-icon"> -->
+    <!-- Not important. Just use it in all your codes-->
+    <meta charset="UTF-8">
+    <!--all the information about the website are treated as meta data  -->
+    <!--Description of the website  -->
+    <meta name="description" content="Codify Academy's ####">
+    <!--Keywords for Document  -->
+    <meta name="keywords" content="Codify Academy, ######">
+    <!--Author of Document  -->
+    <meta name="author" content="Ismael Matos/ Codify Academy 03-2017">
+    <!--The viewport gives the browser instructions on how to control the page's dimensions and scaling-->
+    <!--Use it always  t make your querys work-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Title /  gives the title to your website-->
+    <title> Angular App</title>
+
+    <!-- Font Awesome - Library with icons that you can use in ur web page -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- To link the font-family -->
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Sedgwick+Ave+Display" rel="stylesheet">
+    <!-- Author Custom CSS / To call the CSS BOOTSTRAP file-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <!-- Author Custom CSS / To call the CSS ANIMATED file-->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <!-- Author Custom CSS / To call the CSS file-->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  <body ng-app="myApp" >
+    <div id="header">
+      <div  id="newyork" class="jumbotron">
+        <a href="https://www.nytimes.com"><img id="logo"class="logo" src="../angular_magichour/img/NYT_logo.png" alt=""></a>
+
+        <p id="byme" class="author">by IshCoDesign</p>
+
+        <button id="quickSearch" type="button" class="bluebutton btn btn-primary btn-lg"  role="button" value="Quick Search">Quick Search</button>
+        <!-- <input type="button" class="bluebutton btn btn-primary btn-lg"  name="button" ng-click = "input={color:"red"}" value="Quick Search"></input> -->
+        <a  id="webpage" href="https://www.nytimes.com"><button id="button" type="button" class="bluebutton btn btn-primary btn-lg"  role="button" value="Go to Website">Go to Website</button></a>
+      </div>
+
+      <div id="input" class="input" ng-style="input" ng-controller="firstCtrl">
+        <!-- The double curly brackets means: hey run some javascript -->
+          <!-- <h1>{{myName.toUpperCase()}}</h1> -->
+          <!-- ng-change is like an event listener and change the element inmediatley for that reason is better to put it im the button-->
+          <!-- <input class="form-control" ng-model='myName' ng-change="logChanges(myName)"> -->
+          <!-- <input class="form-control" ng-model='myName'>
+
+          <h1>{{myName}}</h1>
+          <button class="btn btn-danger"type="button" ng-click="logChanges(myName)" name="button" >Get Name</button>
+          <br> -->
+          <!-- <ul>
+            <li ng-repeat="x in names">{{x}}</li>
+          </ul> -->
+
+          <!-- <ul>
+            <li ng-repeat="name in objectArray">{{name.name}} is a {{name.gender}}  of {{name.age}} years old</li>
+
+          </ul> -->
+
+            <!--         API     -->
+            <input class="form-control" id="search" placeholder="Search" ng-model="userSearch" >
+            <!-- ng-disabled disable the button if the user input is less than 3 characters -->
+            <button class="btn btn-success" id="searchButton" ng-disabled="userSearch.length <3" name="button"   ng-click="logChanges(userSearch)" >Search</button>
+            <div id="scroll" class="input">
+                <ul>
+                  <li ng-repeat="x in articles.data.response.docs">
+                    <a ng-href="{{x.web_url}}" target="_blank"><h2>{{x.headline.main}}</h2></a>
+                    <h6>{{x.byline.original}}  </h6>
+                  </li>
+                </ul>
+            </div>
+
+
+      </div>
+
+    </div>
+
+
+
+    <!-- Angular JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src=>"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</script>
+    <!-- BOOTSTRAP JAVASCRIPT -->
+    <script  src="js/bootstrap.min.js" ></script>
+    <!-- CUSTOM JAVASCRIPT -->
+    <script src="js/app.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- <script src="js/controllers/searchCtrl.js"></script> -->
+
+  </body>
+</html>
